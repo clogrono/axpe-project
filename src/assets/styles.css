@@ -1,0 +1,26 @@
+.searck-input-left{
+    position: absolute;
+    min-width: 20vw;
+    top: 14vh;
+    left: 30vw;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    box-shadow: 2px 2px 2px 1px rgb(151, 151, 151);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    z-index: 15;
+}
+.searck-input-right{
+    position: absolute;
+    min-width: 20vw;
+    top: 14vh;
+    left: 17vw;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    box-shadow: 2px 2px 2px 1px rgb(151, 151, 151);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    z-index: 15;
+}
