@@ -42,7 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## The fist question answer
 
 ## Que problemas detectas en la operación y razona la respuesta
- Hay factores como si descargar y ver la pelicula a la vez
+ Hay factores como si descargar y ver la pelicula a la vez ....
 ## Solucion
 getTotal(){
   let total = 0;
