@@ -39,26 +39,30 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## The fist question answer
+## The first question answer
 
 ## Que problemas detectas en la operación y razona la respuesta
- Hay factores como si descargar y ver la pelicula a la vez ....
+ Teniendo en cuenta la refactorización y posibles añadidos en el codigo, el uso de if else
+ la refactorizaría utilizando un switch permitiendo así un manejo más ágil de futuras opciones
+ y queda más claro.
 ## Solucion
+
+Utilizaré un switch que le pasamos true que nos petmite un condicional en cada caso.
+
 getTotal(){
   let total = 0;
   this.services.forEach(service, index =>{
     let multimediaContent = service.getMultimediaContent ();
-    if(typeof service == StreamService){
-      total += multimediaContent.streamPrice;
-    }else if(typeof service == DownloadService){
-      total+= multimediaContent.downloadPrice;
-    }
-    else if(typeof service == DownloadService && typeof service == StreamService){
-      total+= multimediaContent.downloadPrice + multimediaContent.streamPrice;;
-    }
-
-    if(typeof multimediaContent == PremiumContent){
-      total+= multimediaContent.additionalFee;
+      switch(true){
+      case (typeof service == StreamService):
+        total += multimediaContent.streamPrice;
+        breack;
+      case (typeof service == DownloadService):
+        total+= multimediaContent.downloadPrice;
+        breack;
+      case (typeof multimediaContent == PremiumContent):
+        total+= multimediaContent.additionalFee;
+        breack;
     }
   })
   return total;

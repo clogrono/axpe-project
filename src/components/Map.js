@@ -8,47 +8,7 @@ import { addMarker } from '../actions/markerAtion';
 const googleMapsApiKey = "AIzaSyD1LqPNfReHlA4RTAU1YOuVKZxTqvCPa0g";
 Geocode.setApiKey(googleMapsApiKey);
 
-const mapStateToProps = state => {
-	return {
-		markers: state.markers
-	}
-}
-
-
-const mapDispatchToProps = dispatch => {
-	return {
-		addMarker: (Marker) => dispatch(addMarker(Marker))
-	}
-}
-
 class connectedMap extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {
-	// 		mapPosition: {
-	// 			lat: this.props.center.lat,
-	// 			lng: this.props.center.lng
-	// 		}
-	// 	}
-	// }
-
-	// onPlaceSelected = (place) => {
-	// 	if (!place.geometry) {
-	// 		return false;
-	// 	}
-	// 	const
-	// 		latValue = place.geometry.location.lat(),
-	// 		lngValue = place.geometry.location.lng();
-	// 	this.props.addMarker({ lat: latValue, lng: lngValue })
-	// 	this.setState({
-	// 		mapPosition: {
-	// 			lat: latValue,
-	// 			lng: lngValue
-	// 		}
-	// 	})
-	// };
-
-
 	render() {
 		const CustomMap = withScriptjs(
 			withGoogleMap(
