@@ -66,4 +66,4 @@ getTotal(){
     }
   })
   return total;
-}
+};
